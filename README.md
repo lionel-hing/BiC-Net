@@ -1,4 +1,4 @@
-# Visual Spatio-temporal Relation-enhanced Network for Cross-modal Text-Video Retrieval
+# Visual Spatio-Temporal Relation-Enhanced Network for Cross-Modal Text-Video Retrieval
 
 This is our implementation for the paper:
 
