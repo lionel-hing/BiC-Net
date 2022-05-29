@@ -37,4 +37,4 @@ Download the processed video and text features of [MSR-VTT](https://drive.google
 
 
 
-Last Update Date: May 29, 2020
+Last Update Date: May 29, 2022
