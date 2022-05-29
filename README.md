@@ -26,8 +26,7 @@ python train.py --cuda --is_train --dataset=msr-vtt --data_split=9000 --layer_nu
 run eval.py to evaluate models:
 ```
 python eval.py --cuda --checkpoint= ./models/ckpt_best.pth
-
-
+```
 ### Example to get the results
 
 There are a lot of experimental records in the ./data/runs/xxx
