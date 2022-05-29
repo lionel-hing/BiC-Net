@@ -399,15 +399,6 @@ def create_datasets(dataset_path, args, preload_vid_feat=False, preload_text_fea
 
 def create_loaders(train_set, val_set, test_set, batch_size, num_workers):
     """create dataloader for dataset"""
-    # train_loader = data.DataLoader(
-    #     train_set, batch_size=batch_size, shuffle=True, num_workers=num_workers,
-    #     collate_fn=train_set.collate_fn, pin_memory=True)
-    # val_loader = data.DataLoader(
-    #     val_set, batch_size=batch_size, shuffle=False, num_workers=num_workers,
-    #     collate_fn=val_set.collate_fn_test, pin_memory=True)
-    # test_loader = data.DataLoader(
-    #     test_set, batch_size=batch_size, shuffle=False, num_workers=num_workers,
-    #     collate_fn=test_set.collate_fn_test, pin_memory=True)
 
     train_loader = data.DataLoader(
         train_set, batch_size=batch_size, shuffle=True,
