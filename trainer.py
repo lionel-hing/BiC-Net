@@ -8,7 +8,7 @@ import torch.nn.parallel
 from torch.nn import functional as F
 import utils
 from loss import ContrastiveLoss
-from model import VSR
+from model import BiC
 
 
 def unpack_data(data_dict, use_cuda, device):
@@ -50,8 +50,8 @@ class TrainerVideoText:
         # build model
         self.device = torch.device("cuda:0" if self.use_cuda else "cpu")
         device_ids = [0, 1, 2, 3]
-        self.model = torch.nn.DataParallel(VSR(args), device_ids=device_ids)
-        # self.model = VSR(args)
+        self.model = torch.nn.DataParallel(BiC(args), device_ids=device_ids)
+        
         self.model.to(self.device)
         self.best_model_ckpt = copy.deepcopy(self.model.state_dict())
 
@@ -66,7 +66,7 @@ class TrainerVideoText:
 
         if args.checkpoint != "":
             self.logger.info(f"Load checkpoint {args.checkpoint}")
-            self.model = torch.nn.DataParallel(VSR(args))
+            self.model = torch.nn.DataParallel(BiC(args))
             self.model.to(self.device)
             self.model.load_state_dict(torch.load(args.checkpoint), False)
 
