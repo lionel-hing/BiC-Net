@@ -278,9 +278,9 @@ def get_args(description='VSR-Net for text-video retrieval task'):
     parser.add_argument("--epochs", type=int, default=100, help="")
     parser.add_argument("--seed", type=int, default=42, help="")
     parser.add_argument("--learning_rate", type=float, default=0.0002)
-    parser.add_argument("--log_dir", type=str, default="/workspace/ninghan/MSR-VTT"
+    parser.add_argument("--log_dir", type=str, default="/workspace/xxx/MSR-VTT"
                                                        "/runs", help="")
-    parser.add_argument("--dataroot", type=str, default="/workspace/ninghan"
+    parser.add_argument("--dataroot", type=str, default="/workspace/xxx"
                                                         "/MSR-VTT", help="")
     parser.add_argument("--cuda", action="store_true", help="")
     parser.add_argument("--preload_vid", action="store_true", help="Load video features into RAM")
