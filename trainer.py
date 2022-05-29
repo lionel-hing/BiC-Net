@@ -48,8 +48,8 @@ class TrainerVideoText:
         self.logger = utils.get_logger(self.log_dir, "trainer", log_file=args.is_train)
 
         # build model
-        self.device = torch.device("cuda:4" if self.use_cuda else "cpu")
-        device_ids = [4, 5, 6, 7]
+        self.device = torch.device("cuda:0" if self.use_cuda else "cpu")
+        device_ids = [0, 1, 2, 3]
         self.model = torch.nn.DataParallel(VSR(args), device_ids=device_ids)
         # self.model = VSR(args)
         self.model.to(self.device)
