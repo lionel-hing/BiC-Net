@@ -57,13 +57,7 @@ class TrainerVideoText:
 
         # initialize loss function and optimizer
         self.criterion = ContrastiveLoss(args.cuda, max_violation=False)
-
-        #base_params = list(map(id, self.model.module.text_model.parameters()))
-        #logits_params = filter(lambda p: id(p) not in base_params, self.model.parameters())
-        #params = [
-         #   {"params": logits_params, "lr": args.learning_rate},
-          #  {"params": self.model.module.text_model.parameters(), "lr": 3e-5},
-        #]
+        
         self.optimizer = torch.optim.Adam(self.model.parameters(), lr=args.learning_rate)
 
         # scheduler
