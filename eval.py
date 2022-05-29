@@ -5,7 +5,7 @@ import utils
 from dataset import create_datasets, create_loaders
 from trainer import TrainerVideoText
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "1, 2, 3"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0, 1, 2, 3"
 
 
 def main():
