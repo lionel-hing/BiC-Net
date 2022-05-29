@@ -5,11 +5,11 @@ from transformers import AutoModel
 import utils
 
 
-class VSR(nn.Module):
-    """VSR-Net model"""
+class BiC(nn.Module):
+    """BiC-Net model"""
 
     def __init__(self, args):
-        super(VSR, self).__init__()
+        super(BiC, self).__init__()
 
         self.global_dim = args.global_dim
         self.region_dim = args.region_dim
@@ -85,23 +85,18 @@ class VSR(nn.Module):
             region_emb_raw = region_emb
             # spatial
             region_emb_output = torch.zeros_like(region_emb)
-            # 处理视频帧内对象关系
             for i in range(batch_size):
                 single_region_emb = region_emb[i]
                 frame_region_emb = layer.encoder_layers[0](region_emb[i], region_emb[i], region_emb[i],
                                                            single_region_mask)
                 region_emb_output[i] = frame_region_emb
-            # 第一种
+          
             region_emb_output = self.norm(region_emb_output + region_emb_raw)
-            #region_emb_output = self.norm(region_emb_output)
-           # temporal
-            # 处理视频所有对象关系
+           
             region_emb_final = layer.encoder_layers[1](region_emb_output, region_emb_output, region_emb_output, region_mask)
-            # 第二种
+            
             region_emb_final = self.norm(region_emb_final + region_emb_output)
-            # residual connection
-            # 第三种
-            ##region_emb = self.norm(region_emb_final)
+            
             region_emb = self.norm(region_emb_final + region_emb_raw)
         region_emb = (self.S_pool_region(region_emb)).squeeze(2)
         region_emb = self.T_pool_region(region_emb, global_mask)
