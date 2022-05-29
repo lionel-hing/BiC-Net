@@ -269,7 +269,7 @@ def close_logger(logger: logging.Logger):
         i.close()
 
 
-def get_args(description='VSR-Net for text-video retrieval task'):
+def get_args(description='BiC-Net for text-video retrieval task'):
     parser = argparse.ArgumentParser(description=description)
     parser.add_argument("--dataset", type=str, default="msr-vtt", help="abbreviation of dataset")
     parser.add_argument("--data_split", type=str, default="official", help="")
