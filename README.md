@@ -1,4 +1,4 @@
-# BiC-Net: Learning Efficient Spatio-Temporal Relation for Text-Video Retrieval  [[paper]](https://arxiv.org/abs/2110.15609)
+# BiC-Net: Learning Efficient Spatio-Temporal Relation for Text-Video Retrieval
 
 This is our implementation for the paper:
 
