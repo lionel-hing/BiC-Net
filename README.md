@@ -1,5 +1,5 @@
 # BiC-Net: Learning Efficient Spatio-Temporal Relation for Text-Video Retrieval 
-(https://arxiv.org/abs/2110.15609)
+[[paper]](https://arxiv.org/abs/2110.15609)
 This is our implementation for the paper:
 
 Ning Han, Jingjing Chen, Chuhao Shi, Yawen Zeng, Guangyi Xiao, and Hao Chen. 2022. BiC-Net: Learning Efficient Spatio-Temporal Relation for Text-Video Retrieval.
