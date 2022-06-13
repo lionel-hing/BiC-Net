@@ -34,7 +34,7 @@ There are a lot of experimental records in the ./data/runs/xxx
 
 ### Dataset
 We provide three datasets that we used in our paper: MSR-VTT, MSVD, YouCook2.
-Download the processed video and text features of [MSR-VTT](https://drive.google.com/file/d/19GiZU5lqIUsdYahp5HYBECy-7hRJnkkb/view?usp=sharing), [MSVD](https://drive.google.com/file/d/1j87YAvIJ3yZ3s6tV7v8YQHMLjXxRRI3N/view?usp=sharing), [YouCook2](https://drive.google.com/file/d/1q7QocJq3mDJU0VxqJRZhSbqdtPerC4PS/view), and [YouCook2_BB](https://github.com/MichiganCOG/Video-Grounding-from-Text), and save them in `/data` folder.
+Download the processed video and text features of [MSR-VTT](https://drive.google.com/file/d/1a7Zrg1EUA6rp-UX-p8SKfOkyxwKkcfBH/view?usp=sharing), [MSVD](https://drive.google.com/file/d/1j87YAvIJ3yZ3s6tV7v8YQHMLjXxRRI3N/view?usp=sharing), [YouCook2](https://drive.google.com/file/d/1q7QocJq3mDJU0VxqJRZhSbqdtPerC4PS/view), and [YouCook2_BB](https://github.com/MichiganCOG/Video-Grounding-from-Text), and save them in `/data` folder.
 
 
 
